@@ -1,11 +1,16 @@
 <?php
 
+function mb_ucfirst($string) {
+      return mb_strtoupper(mb_substr($string, 0, 1)) . mb_substr($string, 1);
+}
 
-$userSurname = readline('Введите фамилию: ');
+///////////////////////////////////////////////////////
 
-$userName = readline('Введите имя: ');
+$userSurname = mb_ucfirst(readline('Введите фамилию: '));
 
-$userSecondName = readline('Введите отчество: ');
+$userName = mb_ucfirst(readline('Введите имя: '));
+
+$userSecondName = mb_ucfirst(readline('Введите отчество: '));
 
 ///////////////////////////////////////////////////////
 
